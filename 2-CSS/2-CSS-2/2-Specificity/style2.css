@@ -1,0 +1,12 @@
+/* Cascading style priority */
+/* The last rule will be applied due to specificity and order of appearance */
+
+div.cont .para {
+    background-color: green;
+}
+.cont p.para {
+    background-color: red;
+}
+.cont .para {
+    background-color: blue !important;
+}

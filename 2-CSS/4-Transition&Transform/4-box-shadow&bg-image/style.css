@@ -1,0 +1,15 @@
+
+div{
+    height: 100px;
+    width: 200px;
+    text-align: center;
+    background-color: #fe218b;
+    margin: 25px auto;
+    box-shadow: 2px 2px 8px gray ;
+    background-image: url(image.jpg);
+    background-size: contain;
+
+    /* most used */
+    background-size: cover;
+}
+

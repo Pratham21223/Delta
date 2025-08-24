@@ -1,0 +1,112 @@
+/* Universal selector */
+* {
+    font-family: "Courier New";
+}
+/* Element selectors */
+h1,h3{
+    color: #b92b27;
+}
+/* id selectors */
+#login{
+    background-color: white;
+}
+#login:hover{
+    background-color: #b92b27;
+    color: white;
+}
+#signup{
+    background-color: #b92b27;
+}
+#signup:hover{
+    background-color: white;
+    color: #b92b27;
+}
+#myId p{
+    color: blue;
+    text-align: center;
+}
+/* class selectors */
+.main{
+    color: #b92b27;
+}
+.upvote{
+    background: #0f0;
+    color: aliceblue
+}
+/* descendent selectors */
+main p{
+    color: rgb(83, 118, 12);
+}
+.post a{
+    color: blueviolet;
+    background-color: aliceblue;
+    text-decoration: none;
+}
+nav ul li {
+    color: hotpink;
+}
+
+/* Combinators */
+/* sibling combinator */
+p+h3{
+    text-decoration: underline;
+}
+.upvote + button{
+    background-color: cornflowerblue;
+    color: darkblue;
+}
+/* child combinator */
+div>input{
+    background-color: darkseagreen;
+}
+/* attribute selector */
+input[type="text"]{
+color: red;
+}
+input[type="password"]{
+color: blue;
+}
+input[type]{
+    background-color: lightgray;
+}
+
+/* pseudo-classes */
+/* hover */
+button:hover{
+    background-color: black;
+    color: white;
+}
+h3:hover{
+    text-decoration: none;
+}
+/* active */
+button:active{
+    background-color: magenta;
+    color: tomato;
+}
+p:active{
+    font-weight: bold;
+    color: green;
+}
+/* checked */
+input[type="radio"]:checked + label{
+    color: red;
+    font-weight: bold;
+}
+/* nth of type */
+div:nth-of-type(2n+1) {
+    background-color: blanchedalmond;
+}
+
+/* pseudo-elements */
+/* first letter */
+h1::first-letter {
+    color:  red
+}
+p::first-line{
+    color: purple;
+}
+p::selection {
+    background-color: yellow;
+    color: black;
+}

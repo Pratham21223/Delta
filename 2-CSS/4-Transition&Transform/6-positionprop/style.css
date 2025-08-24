@@ -1,0 +1,35 @@
+div{
+    background-color: aqua;
+    display: inline-block;
+    height: 100px;
+    width:100px;
+    border: 2px solid black;
+    margin: 10px;
+}
+#static{
+    background-color: salmon;
+    position: static;
+    top: 100px;
+    left: 100px;
+}
+/* apne orginal position se shift */
+#relative{
+     background-color: magenta;
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+/* porre documement se */
+#absolute{
+     background-color: maroon;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+/* Fix rehenge chahe kuch bhi kar lo || Used for navigation bar */
+#fixed{
+     background-color: green;
+    position: fixed;
+    top: 50px;
+    left: 100px;
+}

@@ -1,0 +1,30 @@
+body{
+    background-color: wheat;
+    text-align: center;
+    font-family: Georgia;
+}
+p{
+    color:#5C4033;
+    color: red;
+    line-height: 30px;
+}
+h3{
+    text-align: right;
+}
+a{
+    color: rgb(0, 255, 0);
+    text-decoration: none;
+}
+button{
+    background-color: while;
+    color: #8A2BE2;
+}
+textarea{
+    color: #000;
+}
+h1{
+    text-decoration: underline;
+}
+hr{
+    border: 1px solid #000;
+}

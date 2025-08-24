@@ -1,0 +1,17 @@
+*{
+    margin: 10px;
+}
+img{
+    display: block;
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+    border-radius: 5%;
+}
+button{
+    font-size: medium;
+
+}
+button:active{
+        transform: scale(1.1);
+}

@@ -1,0 +1,31 @@
+#container{
+    height: 600px;
+    width: 80%;
+    background-color: azure;
+    margin: 10px auto;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+}
+#org {
+    /* flex-grow: 1; */
+    flex-basis: 100px;
+    flex: 1 2 100px
+}
+#blue{
+    /* flex-grow: 3; */
+    /* max-width: 400px;
+    min-width: 400px; */
+    flex: 1 2 100px;
+}
+h1{
+    text-align: center;
+}
+#container div{
+    height: 200px;
+    width: 10px;
+    text-align: center;
+    font-size: 1em;
+    color: white;
+}

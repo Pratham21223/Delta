@@ -1,0 +1,23 @@
+div{
+    height: 100px;
+    width: 100px;
+    border: 2px solid;
+    background-color: pink;
+}
+.one{
+    background-color: aquamarine;
+    z-index: 1;
+}
+.two{
+    background-color: darksalmon;
+    position: relative;
+    left: 30px;
+    bottom: 50px;
+    z-index: -1;
+}
+.three{
+    position: relative;
+    bottom: 70px;
+    left: 60px;
+    z-index: -2;
+}

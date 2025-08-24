@@ -1,0 +1,42 @@
+section{
+    margin-top: 100px;
+}
+div{
+    height: 100px;
+    width: 200px;
+    text-align: center;
+    background-color: #fe218b;
+    border: 2px solid black;
+    margin: 25px auto;
+    transition: 1s ease-in-out;
+}
+div:nth-of-type(2n){
+    background-color: #fed700;
+}
+div:nth-of-type(3n){
+    background-color: #21b0fe;
+}
+
+/* transform */
+/* rotate */
+#one:hover{
+    transform: rotate(40deg);
+}
+#two:hover{
+    transform: scaleX(1.2);
+}
+#three:hover{
+    transform: scale(1.2,2);
+}
+#four:hover{
+    transform: translate(-100px);
+}
+#five:hover{
+    transform: skew(30deg);
+}
+#six:hover{
+    transform: rotate(45deg) translate(150px);
+}
+#seven:hover{
+    transform: rotate(40deg) scale(1.2) translate(100px) skew(10deg);
+}

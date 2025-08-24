@@ -1,0 +1,39 @@
+h1{
+    background-color: yellow;
+    border: 2px solid;
+}
+@media (max-width:400px){
+    h1{
+        background-color: red;
+        color: white;
+    }
+    div{
+        height: 100px;
+        width: 100px;
+        background-color: aqua;
+    }
+}
+@media (width:400px){
+    h1{
+        background-color: limegreen;
+        color: white;
+    }
+}
+@media (min-width:400px){
+    h1{
+        background-color: palevioletred;
+        color: white;
+    }
+}
+@media (min-width:400px) and (max-width:600px){
+    h1{
+        background-color: magenta;
+        color: white;
+    }
+}
+@media (orientation:portrait){
+    h1{
+        background-color: aqua;
+        color:azure;
+    }
+}

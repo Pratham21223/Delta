@@ -1,0 +1,16 @@
+<%- include("E:/Sigma Web Development/8-Node-EJS/4-Serving static files and Includes/includes/head.ejs") %>
+  <body>
+    <h2>This page belongs to @<%= data.name %></h2>
+    <button>Follow</button>
+    <button>Message</button>
+    <p>Followers : <%= data.followers %> &nbsp;&nbsp;Following : <%= data.following %></p>
+    <hr>
+    <% for (post of data.posts) { %>
+      <img src="<%=post.image%>" >
+      <p>Likes : <%= post.likes %> &nbsp;&nbsp;Comments : <%= post.comments %></p>
+      <hr>
+    <% } %>
+    
+  </body>
+  <script src="/app.js"></script>
+</html>

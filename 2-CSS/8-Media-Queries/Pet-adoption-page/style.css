@@ -1,0 +1,35 @@
+span{
+  color: brown;
+}
+.card{
+  width: 300px;
+  border: 2px solid;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  transition: 1s;
+}
+.card:hover{
+  box-shadow: 30px 30px 100px;
+  transform: scale(1.07);
+  background-color: lightgrey;
+}
+h3{
+  text-align: center;
+}
+img{
+  width: 100%;
+  border-radius: 5%;
+}
+h4{
+  text-align: center;
+}
+#pets{
+  display: flex;
+  justify-content: space-evenly;
+}
+@media(max-width:400px){
+  #pets{
+    flex-wrap: wrap;
+  }
+}
