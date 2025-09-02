@@ -1,6 +1,6 @@
+//inseting data in bulk.
 import { faker } from '@faker-js/faker';
 import mysql from 'mysql2';
-//inseting data in bulk.
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',

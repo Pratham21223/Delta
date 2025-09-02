@@ -1,0 +1,29 @@
+.card{
+    height: 300px;
+    width: 200px;
+    border-radius: 5%;
+    margin: 10px;
+    display: inline-block;
+    border:2px solid black;
+    box-shadow: 3px 3px 10px;
+    transition-duration: 0.5s;
+    line-height: 5px;
+
+}
+img{
+    height: 150px;
+    width: 200px;
+    border-radius: 5% 5% 0 0 ;
+}
+#des{
+    padding-left: 10px ;
+}
+#des h3{
+    font-style: italic;
+    color: rgb(0, 89, 255);
+}
+.card:hover{
+    box-shadow: 3px 3px 10px;
+    transform: scale(1.05);
+    background-color: lightgrey;
+}
