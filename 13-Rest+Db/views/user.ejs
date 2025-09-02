@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show users</title>
+    <style>
+        table,tr,td,th{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>No.</th>
+            <th>Id</th>
+            <th>Username</th>
+            <th>Email</th>
+        </tr>
+    <% let count=0;
+    for(user of users){ 
+        count++%>
+        <tr>
+        <td><%= count %></td>
+        <td><%= user.id %></td>
+        <td><%= user.username %></td>
+        <td><%= user.email %></td>
+        <td>
+        <form method="get" action="/user/<%=user.id%>/edit">
+            <button>Edit username</button>
+            </form></td>
+        </tr>
+    <% } %>
+    </table>
+</body>
+</html>
