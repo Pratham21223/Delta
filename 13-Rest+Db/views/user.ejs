@@ -30,6 +30,10 @@
         <form method="get" action="/user/<%=user.id%>/edit">
             <button>Edit username</button>
             </form></td>
+        <td>
+        <form method="post" action="/users/<%=user.id%>?_method=DELETE">
+            <button>Delete user</button>
+            </form></td>
         </tr>
     <% } %>
     </table>

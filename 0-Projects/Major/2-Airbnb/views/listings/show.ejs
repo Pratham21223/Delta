@@ -1,0 +1,79 @@
+<% layout("/layouts/boilerplate") %>
+
+    <div class="row mt-3">
+    
+    <div class="card col-7 show">
+    <img src="<%= listing.image.url %>" class="card-img-top show-img" alt="listing">
+    <div class="card-body">
+    <h5 class="card-title"><b><%= listing.title %></b></h5>
+    <p class="card-desc"><%= listing.description %></p>
+    <h6 class="card-text"><b>&#8377; <%= listing.price.toLocaleString("en-IN") %> / Night</b></h6>
+    <p class="card-text"><%= listing.location %>, <%= listing.country %></p>
+    <p class="card-text"></p>
+    <a href="/listings/<%= listing._id %>/edit" class="btn btn-dark">Edit Listing</a>
+    <form action="/listings/<%= listing._id %>?_method=DELETE" method="post" style="display: inline-block;">
+        <button class="btn btn-danger">Delete listing</button>
+    </form>
+    </div>
+    </div>
+    </div>
+    <br>
+    <div class="col-8 offset-3 mb-3 mt-3">
+  <h4 class="mb-3">Leave a Review</h4> 
+  <form action="/listings/<%= listing._id %>/reviews" method="post" novalidate class="needs-validation">
+    
+    <div class="mb-3">
+      <label for="rating" class="form-label">Rating</label>
+      <div class="d-flex align-items-center gap-2">
+        <input 
+          type="range" 
+          min="1" 
+          max="5" 
+          value="3"
+          id="rating" 
+          name="rating" 
+          class="form-range w-75"
+          oninput="rangeValue.textContent = this.value"
+        >
+        <output id="rangeValue" class="fw-semibold">3</output>
+      </div>
+      <div class="form-text">Slide to select rating (1 to 5)</div>
+    </div>
+    <div class="mb-3">
+      <label for="comment" class="form-label">Comments</label>
+      <textarea 
+        name="comment" 
+        id="comment" 
+        rows="5"
+        class="form-control w-75" 
+        placeholder="Write your feedback here..."
+        required
+      ></textarea>
+      <div class="invalid-feedback">
+        Please enter a comment
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-dark">
+      Submit Review
+    </button>
+  </form>
+  <hr>
+  <h3 class="mt-4 mb-4">All Reviews</h3>
+  <div class="row row-cols-2">
+   <% for(review of listing.reviews){ %>
+        <div class="card col-5 ms-3 mb-3">
+        <div class="card-body">
+            <h4 class="card-title">Pratham Kataria</h4>
+            <h5 class="card-subtitle mb-2 text-body-secondary"><b><%= review.rating %>⭐</b></h5>
+            <p class="card-text"><%= review.comment %></p>
+        </div>
+        <form action="/listings/<%= listing._id %>/reviews/<%= review._id %>?_method=DELETE" method="post" class="mb-3 ms-3">
+            <button class="btn btn-outline-danger btn-sm">Delete</button>
+        </form>
+        </div>
+    <% } %>
+  </div>
+</div>
+    </div>
+    <br>

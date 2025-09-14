@@ -5,6 +5,7 @@ const express=require('express');
 const app=express();
 const path=require('path')
 const method_override=require("method-override");
+const { v4: uuidv4 } = require('uuid');
 app.use(method_override("_method"));
 app.use(express.urlencoded({extended:true}))
 app.set("view engine","ejs");
@@ -72,6 +73,35 @@ app.patch("/user/:id",(req,res)=>{
   });
 })
 
+//Adduser route
+app.get("/user",(req,res)=>{
+  res.render("newuser.ejs")
+})
+
+app.post("/user",(req,res)=>{
+  let {username: newUsername,email:newEmail,password: newPass}=req.body;
+  let q=`Insert into user (id,username,email,password) values ('${uuidv4()}','${newUsername}','${newEmail}','${newPass}')`;
+  connection.query(q,(err, result) => {
+    if (err) {
+        console.log(err);
+        return;
+    }
+    res.send("User added")
+  });
+})
+
+//Delete user
+app.delete("/users/:id",(req,res)=>{
+  let {id}=req.params;
+  let q=`Delete from user where id='${id}'`;
+  connection.query(q,(err, result) => {
+    if (err) {
+        console.log(err);
+        return;
+    }
+    res.redirect('/users')
+  });
+  })
 
 
 
